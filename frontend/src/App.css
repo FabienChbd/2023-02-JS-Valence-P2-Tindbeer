@@ -1,0 +1,292 @@
+:root {
+  --primary-color: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+  --secondary-color: white;
+  --shadow-color: rgb(196, 195, 195);
+  --hover-color: ;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+header,
+nav,
+.searchBar,
+footer {
+  display: flex;
+  background: var(--primary-color);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 2%;
+  border-radius: 0 0 15px 15px;
+}
+
+header > div > h1 {
+  margin-right: auto;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+header > div > img {
+  margin-right: auto;
+  margin-left: 1%;
+}
+
+.logo {
+  height: 5em;
+  border-radius: 15px;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-name: slideLogo;
+}
+
+nav,
+.searchBar {
+  height: 50px;
+  font-size: 1.4em;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2%;
+  border-radius: 15px;
+}
+
+.navbarScrolled {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  margin: auto;
+  left: 0;
+  border-radius: 15px;
+  background: var(--primary-color);
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0%;
+  gap: 25px;
+}
+
+nav > ul > li {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+a:hover {
+  color: black;
+}
+
+.tind-beer,
+.navbar,
+.searchForm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchForm {
+  color: var(--secondary-color);
+  justify-content: space-evenly;
+}
+
+#searchBeer {
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+  height: 50%;
+}
+
+.beerType {
+  color: var(--secondary-color);
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  margin-top: 2%;
+  border-radius: 15px 15px 0 0;
+  bottom: 0;
+  font-size: 0.75em;
+  color: var(--secondary-color);
+}
+
+@keyframes slideTitle {
+  from {
+    transform: translateX(-1500%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.pageTitle > span {
+  display: inline-block;
+  animation-iteration-count: 1;
+  animation-name: slideTitle;
+}
+.pageTitle {
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-name: slideTitle;
+}
+
+.letterTitle1 {
+  animation-duration: 4000ms;
+}
+
+.letterTitle2 {
+  animation-duration: 3500ms;
+}
+
+.letterTitle3 {
+  animation-duration: 3000ms;
+}
+
+.letterTitle4 {
+  animation-duration: 2500ms;
+}
+
+.letterTitle5 {
+  animation-duration: 2000ms;
+}
+
+.letterTitle6 {
+  animation-duration: 1500ms;
+}
+
+.letterTitle7 {
+  animation-duration: 1000ms;
+}
+
+.letterTitle8 {
+  animation-duration: 500ms;
+}
+
+.letterTitle3 {
+  display: inline-block;
+  animation: 0s 2s 1 slideTitle;
+}
+
+@keyframes slideLogo {
+  from {
+    transform: translateX(1500%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cards {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.beerCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 50px;
+  width: 90%;
+  margin: auto;
+  padding-bottom: 200px;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-name: cards;
+}
+
+.cardOfBeer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--primary-color);
+  border: solid 1px var(--primary-color);
+  box-shadow: 5px 5px var(--shadow-color);
+  border-radius: 5%;
+  width: 400px;
+  padding: 5px;
+}
+
+.beer-picture {
+  width: 100%;
+}
+
+.picture {
+  background-color: white;
+  border-radius: 50%;
+  border: solid 2px var(--secondary-color);
+}
+
+.beerTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.beerName {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.foot {
+  padding: 10px;
+}
+
+.creators {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+  .beerCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cardOfBeer {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .beerCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cardOfBeer {
+    width: 100%;
+  }
+
+  nav > div > ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav > div > ul > li {
+    font-size: 0.8em;
+  }
+}
